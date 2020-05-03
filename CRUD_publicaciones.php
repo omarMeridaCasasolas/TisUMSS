@@ -48,7 +48,7 @@
           <div class='table-responsive'>
             <table class='table table-hover'>
                 <h3>Entradas de convocatoria</h3>
-                <a href='secretaria.php' class='btn btn-success p-2 rounded-lg m-2' id='nuevaConvocatoria'>Crear nueva convocatoria</a>
+                <a href='crearPublicacion.php' class='btn btn-success p-2 rounded-lg m-2' id='nuevaConvocatoria'>Crear nueva convocatoria</a>
                     <thead>
                         <tr>
                             <th>Entrada</th>
@@ -69,7 +69,7 @@
                                 <td>$titulo<br>$fecha</td>
                                 <td><a href='$direcccion_pdf' target='_blank'>$titulo</a></td>
                                 <td>
-                                    <a href='eliminarConvocatoria.php?id=$idConvocatoria' class='btn btn-danger' title='Eliminar'><i class='fas fa-trash-alt'></i></a>
+                                    <a href='form_eliminarConvocatoria.php?id=$idConvocatoria' class='btn btn-danger' title='Eliminar'><i class='fas fa-trash-alt'></i></a>
                                     <a href='editarConvocatoria.php?id=$idConvocatoria' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>
                                 </td>
                             </tr>";

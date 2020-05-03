@@ -21,11 +21,11 @@
     </header>
     <div id="idConvicatoria" class="mx-auto w-75 p-4 my-5 border border-primary">
     <h1>Publicar Convocatoria</h1>
-    <form action="subirPublicacion.php" method="post" enctype="multipart/form-data">
+    <form action="form_subirPublicacion.php" method="post" enctype="multipart/form-data">
         <input type="text" name="titulo" id="titulo" placeholder="Titulo" required autocomplete="off">
         <br>
         <br>
-        <textarea id="descripcion" rows="10" cols="190" name="descripcion" style="resize:none;"> </textarea>
+        <textarea id="descripcion" rows="10" cols="170" name="descripcion" style="resize:none;"> </textarea>
         <br>
         <br>
         <input type="file" name="archivo" id="archivo" required accept='.pdf'> 

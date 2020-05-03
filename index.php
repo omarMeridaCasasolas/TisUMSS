@@ -15,14 +15,14 @@
     }
 ?>
     <div class="d-inline-block w-25 m-5 border border-dark p-2">
-    <form action="verificarUsuario.php" method="post">
+    <form action="form_VerificarUsuario.php" method="post">
         <p>Login: <input type="mail" name="IdUsuaario" id="" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" autocomplete='off'></p>
         <p>Password: <input type="password" name="IdPassword" id="" pattern="^[a-z0-9_-]{3,30}"></p>
         <input type="submit" value="Entrar">
     </form>
     </div>
     <div class="m-4 d-inline-block w-50 ">
-        <h1 class="text-center" >Publicaciones</h1>
+        <h1 class="text-center" >Publicaciones de Convocatorias</h1>
         <?php
             require_once('conexion.php');
             $conn=conectarBaseDeDatos();

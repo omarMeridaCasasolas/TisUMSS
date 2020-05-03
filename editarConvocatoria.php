@@ -26,7 +26,8 @@
     if(isset($_POST['update'])){
         $nuevoTitulo=$_POST['titulo'];
         $nuevaDescrpcion=$_POST['descripcion'];
-        $nuevaFecha=date("Y-m-d H:i:s", (strtotime ("-6 Hours")));
+        date_default_timezone_set('America/La_Paz');
+        $nuevaFecha=date("Y-m-d H:i:s");
         $Actualizar=pg_query($conn,"UPDATE convocatoria SET titulo='$nuevoTitulo', descripcion_convocatoria='$nuevaDescrpcion' ,fecha='$nuevaFecha' WHERE id_convocatoria=$id");
         if (!$Actualizar) {
             echo "An error occurred.\n";

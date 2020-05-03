@@ -23,8 +23,7 @@
             echo "Error al autentificar";
             header("Location:index.php?error=x");
         }
-    }else{ 
-        
+    }else{     
     echo "Eror al autentificar";
     header("Location:index.php?error=y");
     }
