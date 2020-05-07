@@ -44,7 +44,7 @@ body{
 
 nav ul li:hover {
     background-color: firebrick;
-    
+    transition: all .5s;
 }
 nav ul li a:hover{
     text-decoration: none;
@@ -52,4 +52,19 @@ nav ul li a:hover{
 .menu li:hover .submenu{
     transition: all 1.5s;
     display: block;
+}
+
+.cuerpo{
+    position: absolute;
+    top: 22%;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.pie{
+    position: absolute;
+    top: 90%;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
