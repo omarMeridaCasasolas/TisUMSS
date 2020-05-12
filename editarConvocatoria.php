@@ -50,7 +50,7 @@
             <script src="https://kit.fontawesome.com/d848ccec99.js" crossorigin="anonymous"></script>
         </head>
 
-        <body>
+        <body class="cuerpo">
             <header class="bg-info w-100 p-4">
                 <h4 class="font-italic"><i class="fas fa-users"></i>  Bienvenda <?php echo $_SESSION['sesion']; ?></h4>
                 <a href="CRUD_publicaciones.php" class="float-right text-dark">Convocatorias</a>
@@ -64,7 +64,7 @@
                 <input type="text" name="titulo" id="titulo" placeholder="Titulo" autocomplete="off" required value='<?php echo $row[0] ?>'>
                 <br>
                 <br>
-                <textarea id="descripcion" rows="10" cols="190" name="descripcion" style="resize:none;"><?php echo $row[1] ?></textarea>
+                <textarea id="descripcion" rows="10" cols="190" name="descripcion" style="resize:none; width:100%;"><?php echo $row[1] ?></textarea>
                 <br>
                 <br>
                 <input type="file" name="archivo" id="archivo" accept='.pdf'> 

@@ -31,6 +31,10 @@
                 </li>
                 <li><a href="">Contactenos</a></li>
                 <li><a href="login.php">Inicio session</a></li>
+                <form class="bg-danger float-right m-1 p-1"action="" method="get">
+                    <input  type="search" name="buscadorConvocatorias" id="buscadorConvocatorias" placeholder="&#8981;"> 
+                    <input type="submit" value="Buscador">
+                </form>
             </ul>
         </nav>
     </header>
@@ -44,7 +48,9 @@
                 require_once('conexion.php');
                 $conn=conectarBaseDeDatos();
                 //Consulta para ordenar por fecha
-                $consulta=pg_query($conn,"SELECT titulo,descripcion_convocatoria,fecha,direcccion_pdf FROM convocatoria WHERE activo='true' ORDER BY fecha desc");
+                date_default_timezone_set('America/La_Paz');
+                $fechaActual=date("Y-m-d H:i:s");
+                $consulta=pg_query($conn,"SELECT titulo,descripcion_convocatoria,fecha,direcccion_pdf FROM convocatoria WHERE activo='true' AND '$fechaActual' <= fecha_expiracion ORDER BY fecha desc");
                 if (!$consulta) {
                     echo "An error occurred.\n";
                     exit;
@@ -69,9 +75,9 @@
 
     </section>
 
-    <footer class="pie">
+    <footer class="pieIndice">
         <div class="text-center">
-            <h6 class="d-inline-block">Contacto: <a href="">correo_del_Administardor@mail.com ,</a> <a href="">  correo_de_la_Empresa@mail.com</a></h6>
+            <h6 class="d-inline-block">Contacto: <a  href="mailto:elcorreoquequieres@correo.com">correo_del_Administardor@mail.com ,</a> <a  href="mailto:elcorreoquequieres@correo.com">  correo_de_la_Empresa@mail.com</a></h6>
             <h6 class="d-inline-block">Telefono: (+591) 72584871 Administrador, (+591) 77581871 Secretaria</h6 >
         </div>
         <div class="text-center">

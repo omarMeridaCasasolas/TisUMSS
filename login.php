@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Vista/bootstrap.css">
     <link rel="stylesheet" href="Vista/header.css">
 </head>
-<body>
+<body class="cuerpo">
     <nav class="navegador">
         <ul class="menu">
             <li><a href="index.php">Inicio</a></li>
@@ -22,12 +22,25 @@
             </li>
             <li><a href="">Contactenos</a></li>
             <li><a href="">Inicio session</a></li>
+            
         </ul>
     </nav>
 
 <!-- Login -->
+    <div class="overlay" id="overlay">
+            <div id="formReenvio">
+                <form action="form_enviarEmail.php" method="post">
+                    <a href="" class="float-right m-2">Cancelar</a>
+                    <br>
+                    <h2>Formulario de Reenvio</h2>
+                    <label class="d-block mx-auto" for="reenvio_Pass">Correo Electronico: <input class="p-2 font" type="email" name="reenvio_Pass" id="reenvio_Pass" required placeholder="ejemplo@gmail.com"></label>
+                    <label class="d-block mx-auto" for="catcha"><input type="text" name="" id="catcha"></label>
+                    <input class="d-block my-2 mx-auto btn btn-primary" type="submit" value="Reenviar">
+                </form>
+            </div>
+        </div>
 
-    <section class="cuerpo">
+    <section class="principal">
         <div class="border border-dark bg-success w-50 mx-auto my-5 p3">
             <form action="form_VerificarUsuario.php" method="post" class="rounded-sm">
                 <label class="font-italic d-block p-1" for="loginCorreo">Correo Electronico</label>
@@ -35,12 +48,15 @@
                 <label class="font-italic d-block p-1" for="loginPass"> Contraseña</label>
                 <input class="font-italic h4 d-block w-75 mx-auto p-2 rounded-sm" type="password" name="IdPassword" id="loginPass" pattern="^[a-z0-9_-]{3,30}" placeholder="****************" autocomplete='off'>
                 <input type="submit" value="Entrar" class="btn btn-primary d-block mx-auto my-3">
-                <a class="text-dark m-2" href="">Reenviar contraseña a tu correo</a>
+                <!--<a class="text-dark m-2" href="" id="btnSend">Reenviar contraseña a tu correo</a>-->
             </form>
+            <a class="text-dark m-2" href="#" id="btnSend">Reenviar contraseña a tu correo</a>
+            <!--<button class="bg-success"id="btnSend">Reenviar contraseña a tu correo</button>-->
         </div>
     </section>
 
-<!--Cabezera-->
+
+
 
 <footer class="pie">
         <div class="text-center">
@@ -62,5 +78,6 @@
             <h6>Derechos Reservados © 2020 · Universidad Mayor de San Simón.</h6>
         </div>
     </footer>
+    <script src="MyScript.js"></script>
 </body>
 </html>

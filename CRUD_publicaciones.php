@@ -39,7 +39,7 @@
     require_once('conexion.php');
     $conn=conectarBaseDeDatos();
     //Consulta para ordenar por fecha
-    $consulta=pg_query($conn,"SELECT titulo,descripcion_convocatoria,fecha,direcccion_pdf,id_convocatoria FROM convocatoria WHERE activo='true' ORDER BY fecha desc");
+    $consulta=pg_query($conn,"SELECT titulo,descripcion_convocatoria,fecha,direcccion_pdf,id_convocatoria,fecha_expiracion FROM convocatoria WHERE activo='true' ORDER BY fecha desc");
     if (!$consulta) {
         echo "An error occurred.\n";
         exit;
@@ -64,11 +64,14 @@
                             $fecha=$row[2];
                             $direcccion_pdf=$row[3];
                             $idConvocatoria=$row[4];
+                            $fechaDeExpiracion=$row[5];
                             /*$valido=strlen($direcccion)-14;
                             $direcccion_pdf=substr($direcccion,0,$valido);*/
                             echo "<tr>
-                                <td>$titulo<br>$fecha</td>
-                                <td><a href='$direcccion_pdf' target='_blank'>$titulo</a></td>
+                                <td> $titulo <h6>Publicado: $fecha </h6><h6>Expiracion: $fechaDeExpiracion</h6></td>
+                                <td>
+                                    <a  href='$direcccion_pdf' target='_blank'>Abrir  $titulo</a>
+                                </td>
                                 <td>
                                     <a href='form_eliminarConvocatoria.php?id=$idConvocatoria' class='btn btn-danger' title='Eliminar'><i class='fas fa-trash-alt'></i></a>
                                     <a href='editarConvocatoria.php?id=$idConvocatoria' class='btn btn-primary' title='Editar'><i class='fas fa-edit'></i></a>
@@ -81,7 +84,7 @@
     </main>";
     ?>
 
-    <footer class="pie">
+    <footer class="pieIndice">
         <div class="text-center">
             <h6 class="d-inline-block">Contacto: <a href="">correo_del_Administardor@mail.com ,</a> <a href="">  correo_de_la_Empresa@mail.com</a></h6>
             <h6 class="d-inline-block">Telefono: (+591) 72584871 Administrador, (+591) 77581871 Secretaria</h6 >

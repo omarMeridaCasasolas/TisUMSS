@@ -53,18 +53,80 @@ nav ul li a:hover{
     transition: all 1.5s;
     display: block;
 }
+/*
+.principal{
+    position: relative;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+}*/
 
 .cuerpo{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.principal{
     position: absolute;
     top: 22%;
     display: block;
     width: 100%;
+    height: 40%;
     margin: 0 auto;
 }
+
 .pie{
     position: absolute;
-    top: 90%;
-    display: block;
+    bottom: 0%;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
 }
+.cuerpoIndex{
+    position: relative;
+    width: 100%;
+}
+
+.pieIndice{
+    position: absolute;
+    bottom: -25%;
+    width: 100%;
+    margin: auto;
+
+}
+
+.overlay{
+    background-color: rgba(11,11,11, .2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+
+#formReenvio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: blanchedalmond;
+    text-align: center;
+    width: 28%;
+    height: 23vh;
+    border: 2px dashed black;
+    border-radius: 5%;
+    position: absolute;
+}
+.overlay.active{
+    visibility: visible;
+    z-index: 2;
+}
+
+#btnSend{
+    color: initial;
+
+    }
