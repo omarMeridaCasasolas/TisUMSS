@@ -1,11 +1,20 @@
+
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 
 body{
     background-color: #a4b6c5;
+    margin: 0;
+    margin-bottom: 40px;
 }
 .navegador{
     width: 80%;
@@ -84,15 +93,15 @@ nav ul li a:hover{
     width: 100%;
     margin: auto;
 }
-.cuerpoIndex{
-    position: relative;
-    width: 100%;
-}
+
 
 .pieIndice{
+
+    background-color: black;
     position: absolute;
-    bottom: -25%;
+    bottom: 0;
     width: 100%;
+    color: white;
     margin: auto;
 
 }
@@ -128,5 +137,44 @@ nav ul li a:hover{
 
 #btnSend{
     color: initial;
+}
 
+@media (max-width:640px){
+    .navegador{
+        width: 100%;
     }
+    body{
+        min-height: 100vh;
+    }
+    .menu li {
+        padding: 10px;
+        border-bottom: 1px solid whitesmoke;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1244px) and (min-width:640px) {
+    .navegador{
+        width: 95%;
+    }
+    .menu li {
+        padding: 10px;
+        border-bottom: 1px solid whitesmoke;
+        font-size: 14px;
+    }
+    #contenedorDeBusqueda{
+        width: 30%;
+    }
+    #buscadorConvocatorias{
+        width: 58%;
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+
+    body {
+      height: 700px;
+    }
+  }
+
+ 

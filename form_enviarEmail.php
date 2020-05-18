@@ -9,11 +9,12 @@
             $resultado=pg_fetch_row($getPassword);
             $mensaje=" Saludos ".$correDestino." aqui su contraseña correspondiente ".$resultado[0];
             echo "Se envio correctamente el mensaje".$mensaje;
-            //email($correDestino,"Recuperacion de password",$mensaje);
+            mail($correDestino,"Recuperacion de password",$mensaje);
+            header("Location:login.php?dato=x");
         }else{
-            header("Location:login.php?error=y");
+            header("Location:login.php?dato=y");
         }
     }else{
-        header("Location:login.php?error=x");
+        header("Location:login.php?dato=z");
     }
 ?>

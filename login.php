@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="Vista/bootstrap.css">
     <link rel="stylesheet" href="Vista/header.css">
 </head>
-<body class="cuerpo">
+<body>
+    <?php
+        if(isset($_GET['dato'])){
+            $valor=$_GET['dato'];
+            echo "<script>";
+            if($valor=='x'){
+            echo    "alert('Se ha enviado su contraseña a su correo');";
+            }else{
+                if($valor=='y'){
+                    echo  "alert('Usuario no encontrado');";
+                }else{
+                    echo  "alert('Error al  evaluar la sentencia');";
+                }
+            }
+            echo "</script>";
+        }
+    ?>
     <nav class="navegador">
         <ul class="menu">
             <li><a href="index.php">Inicio</a></li>
@@ -44,7 +60,7 @@
         <div class="border border-dark bg-success w-50 mx-auto my-5 p3">
             <form action="form_VerificarUsuario.php" method="post" class="rounded-sm">
                 <label class="font-italic d-block p-1" for="loginCorreo">Correo Electronico</label>
-                <input class="font-italic h4 d-block w-75 mx-auto p-2 rounded-sm" type="mail" name="IdUsuaario" id="" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" autocomplete='off' id="loginCorreo" placeholder="Ejemplo@gmail.com">
+                <input class="font-italic h4 d-block w-75 mx-auto p-2 rounded-sm" type="mail" name="IdUsuaario" id=""  autocomplete='off' id="loginCorreo" placeholder="Ejemplo@gmail.com">
                 <label class="font-italic d-block p-1" for="loginPass"> Contraseña</label>
                 <input class="font-italic h4 d-block w-75 mx-auto p-2 rounded-sm" type="password" name="IdPassword" id="loginPass" pattern="^[a-z0-9_-]{3,30}" placeholder="****************" autocomplete='off'>
                 <input type="submit" value="Entrar" class="btn btn-primary d-block mx-auto my-3">
@@ -58,7 +74,7 @@
 
 
 
-<footer class="pie">
+<footer class="pieIndice">
         <div class="text-center">
             <h6 class="d-inline-block">Contacto: <a href="">correo_del_Administardor@mail.com ,</a> <a href="">  correo_de_la_Empresa@mail.com</a></h6>
             <h6 class="d-inline-block">Telefono: (+591) 72584871 Administrador, (+591) 77581871 Secretaria</h6 >

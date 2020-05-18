@@ -31,10 +31,12 @@
                 </li>
                 <li><a href="">Contactenos</a></li>
                 <li><a href="login.php">Inicio session</a></li>
-                <form class="bg-danger float-right m-1 p-1"action="" method="get">
-                    <input  type="search" name="buscadorConvocatorias" id="buscadorConvocatorias" placeholder="&#8981;"> 
-                    <input type="submit" value="Buscador">
-                </form>
+                <div id="contenedorDeBusqueda" class="bg-danger float-right m-1 p-1">
+                    <form action=""  class="d-flex" method="get">
+                        <input  type="search" name="buscadorConvocatorias" id="buscadorConvocatorias" placeholder="&#8981;"> 
+                        <input  type="submit" value="Buscador">
+                    </form>
+                </div>
             </ul>
         </nav>
     </header>

@@ -30,6 +30,7 @@
         <script src="https://kit.fontawesome.com/d848ccec99.js" crossorigin="anonymous"></script>
     
 </head>
+
 <body>
     <header class="bg-info w-100 p-4">
         <h4 class="font-italic"><i class="fas fa-users"></i>  Bienvenda <?php echo $_SESSION['sesion']; ?></h4>
@@ -44,7 +45,7 @@
         echo "An error occurred.\n";
         exit;
     }
-
+    
     echo "<main class='container mt-5'>
           <div class='table-responsive'>
             <table class='table table-hover'>

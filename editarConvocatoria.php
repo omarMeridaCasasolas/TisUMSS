@@ -75,7 +75,7 @@
             </div>
         </body>
 
-        <footer class="pie">
+    <footer class="pieIndice">
         <div class="text-center">
             <h6 class="d-inline-block">Contacto: <a href="">correo_del_Administardor@mail.com ,</a> <a href="">  correo_de_la_Empresa@mail.com</a></h6>
             <h6 class="d-inline-block">Telefono: (+591) 72584871 Administrador, (+591) 77581871 Secretaria</h6 >
